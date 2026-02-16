@@ -1,16 +1,14 @@
-int(input())
+n = int(input())
 
 for _ in range(n):
-    valores = list(map(int, input().split()))
-    x = valores[0]
-    y = valores[1]
+    x, y = map(int, input().split())
     
-    inicio = min(x, y)
-    fim = max(x, y)
+    menor = min(x, y)
+    maior = max(x, y)
     
     soma_impares = 0
     
-    for i in range(inicio + 1, fim):
+    for i in range(menor + 1, maior):
         if i % 2 != 0:
             soma_impares += i
             
